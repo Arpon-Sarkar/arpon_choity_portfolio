@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Arpon Sarkar Choity — Web Developer & ML Enthusiast</title>
+<meta name="description" content="Portfolio of Arpon Sarkar Choity — Computer Science student, web developer, UI/UX designer, and machine learning researcher from Bangladesh." />
+<meta property="og:title" content="Arpon Sarkar Choity — Portfolio" />
+<meta property="og:description" content="Web Developer · UI/UX Designer · Machine Learning Enthusiast · Researcher" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          display: ['"Space Grotesk"', 'ui-sans-serif'],
+        },
+        colors: {
+          background: 'var(--color-background)',
+          foreground: 'var(--color-foreground)',
+          card: 'var(--color-card)',
+          'card-foreground': 'var(--color-card-foreground)',
+          primary: { DEFAULT: 'var(--color-primary)', foreground: 'var(--color-primary-foreground)' },
+          secondary: { DEFAULT: 'var(--color-secondary)', foreground: 'var(--color-secondary-foreground)' },
+          muted: { DEFAULT: 'var(--color-muted)', foreground: 'var(--color-muted-foreground)' },
+          accent: { DEFAULT: 'var(--color-accent)', foreground: 'var(--color-accent-foreground)' },
+          destructive: { DEFAULT: 'var(--color-destructive)', foreground: 'var(--color-destructive-foreground)' },
+          border: 'var(--color-border)',
+          input: 'var(--color-input)',
+          ring: 'var(--color-ring)',
+        },
+        borderRadius: { xl: '0.875rem', '2xl': '1rem', '3xl': '1.25rem' },
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+
+<!-- ============ NAV ============ -->
+<header id="site-nav" class="fixed inset-x-0 top-0 z-50 py-4 transition-all">
+  <div class="nav-inner mx-3 sm:mx-auto flex max-w-7xl items-center justify-between rounded-2xl px-4 sm:px-6 transition-all">
+    <a href="#home" class="flex items-center gap-2 py-3">
+      <span class="grid h-9 w-9 place-items-center rounded-xl text-white font-bold" style="background:linear-gradient(135deg,var(--color-primary),var(--color-accent))">A</span>
+      <span class="font-semibold tracking-tight">Arpon.dev</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-1">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#research" class="nav-link">Research</a>
+      <a href="#distinctions" class="nav-link">Distinctions</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button id="theme-toggle" class="grid h-10 w-10 place-items-center rounded-full glass" aria-label="Toggle theme">
+        <i data-lucide="sun" class="h-4 w-4 hidden dark:inline"></i>
+        <i data-lucide="moon" class="h-4 w-4 dark:hidden"></i>
+      </button>
+      <a href="#contact" class="hidden md:inline-flex items-center rounded-full px-4 py-2 text-sm font-medium text-white shadow hover:opacity-90 transition" style="background:linear-gradient(90deg,var(--color-primary),var(--color-accent))">Hire Me</a>
+      <button id="menu-toggle" class="grid h-10 w-10 place-items-center rounded-full glass md:hidden" aria-label="Menu">
+        <i data-lucide="menu" class="h-4 w-4"></i>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mx-3 mt-2 md:hidden hidden">
+    <div class="glass flex flex-col rounded-2xl p-2">
+      <a href="#about" class="mob-link">About</a>
+      <a href="#education" class="mob-link">Education</a>
+      <a href="#skills" class="mob-link">Skills</a>
+      <a href="#services" class="mob-link">Services</a>
+      <a href="#research" class="mob-link">Research</a>
+      <a href="#distinctions" class="mob-link">Distinctions</a>
+      <a href="#contact" class="mob-link">Contact</a>
+    </div>
+  </div>
+  <div class="absolute inset-x-0 bottom-0 h-0.5 bg-transparent">
+    <div id="scroll-progress" class="h-full" style="background:linear-gradient(90deg,var(--color-primary),var(--color-accent));width:0%"></div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative isolate flex min-h-screen items-center pt-28 overflow-hidden">
+  <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+    <div class="absolute inset-0 bg-grid opacity-30" style="mask-image:radial-gradient(ellipse at center, black, transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center, black, transparent 70%);"></div>
+    <div class="absolute -top-32 -left-24 h-[28rem] w-[28rem] rounded-full blur-3xl animate-blob" style="background:color-mix(in oklab,var(--color-primary) 30%,transparent)"></div>
+    <div class="absolute -bottom-32 -right-24 h-[32rem] w-[32rem] rounded-full blur-3xl animate-blob" style="animation-delay:-6s;background:color-mix(in oklab,var(--color-accent) 30%,transparent)"></div>
+  </div>
+  <div class="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 py-12 lg:grid-cols-[1.1fr_0.9fr]">
+    <div>
+      <span data-reveal class="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs font-medium text-muted-foreground">
+        <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        Available for freelance & internships
+      </span>
+      <h1 data-reveal class="mt-5 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+        Hi, I'm <span class="text-gradient">Arpon Sarkar Choity</span>
+      </h1>
+      <p data-reveal class="mt-5 text-lg text-muted-foreground sm:text-xl">
+        <span id="typewriter" class="font-medium text-foreground"></span><span class="caret"></span>
+      </p>
+      <p data-reveal class="mt-5 max-w-xl text-muted-foreground">
+        Passionate and motivated Web Developer and Machine Learning engineer-in-training, seeking opportunities to build modern software, AI solutions, and innovative web applications with clean, user-centered design.
+      </p>
+      <div data-reveal class="mt-8 flex flex-wrap gap-3">
+        <a href="#projects" class="group inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-white shadow-lg transition" style="background:linear-gradient(90deg,var(--color-primary),var(--color-accent));box-shadow:0 10px 30px -10px color-mix(in oklab,var(--color-primary) 40%,transparent)">
+          View Portfolio <i data-lucide="arrow-right" class="h-4 w-4"></i>
+        </a>
+        <a href="#contact" class="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-medium transition hover:bg-muted">
+          <i data-lucide="mail" class="h-4 w-4"></i> Contact Me
+        </a>
+        <a href="cv.pdf" download="Arpon_Sarkar_Choity_CV.pdf" class="inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-medium transition hover:bg-muted">
+          <i data-lucide="download" class="h-4 w-4"></i> Download CV
+        </a>
+      </div>
+      <div data-reveal class="mt-10 flex items-center gap-5 text-muted-foreground">
+        <a href="https://www.linkedin.com/in/arpon-sarkar-choity-a77b01394" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="transition hover:text-foreground"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
+        <a href="#" aria-label="GitHub" class="transition hover:text-foreground"><i data-lucide="github" class="h-5 w-5"></i></a>
+        <a href="#" aria-label="Facebook" class="transition hover:text-foreground"><i data-lucide="facebook" class="h-5 w-5"></i></a>
+        <span class="h-px w-12 bg-border"></span>
+        <span class="text-xs">Rajshahi, Bangladesh</span>
+      </div>
+    </div>
+
+    <div class="relative mx-auto flex aspect-square w-[min(92vw,28rem)] items-center justify-center">
+      <div class="absolute inset-0 animate-spin-slow rounded-full opacity-70 blur-md" style="background:conic-gradient(from 0deg,transparent,var(--color-primary),var(--color-accent),transparent)"></div>
+      <div class="absolute inset-2 rounded-full bg-background"></div>
+      <div class="relative grid h-[88%] w-[88%] place-items-center overflow-hidden rounded-full glow-ring" style="background:linear-gradient(135deg,color-mix(in oklab,var(--color-primary) 20%,transparent),var(--color-background),color-mix(in oklab,var(--color-accent) 20%,transparent))">
+        <img src="arpon.png" alt="Arpon Sarkar Choity" class="absolute inset-0 h-full w-full object-cover" onerror="this.style.display='none'" />
+      </div>
+      <div class="chip absolute -left-2 top-10"><i data-lucide="code-2" class="h-4 w-4 text-primary"></i> React · TS</div>
+      <div class="chip absolute -right-2 top-1/3" style="animation-delay:.7s"><i data-lucide="brain" class="h-4 w-4 text-primary"></i> TensorFlow</div>
+      <div class="chip absolute bottom-8 left-4" style="animation-delay:1s"><i data-lucide="palette" class="h-4 w-4 text-primary"></i> UI/UX</div>
+    </div>
+  </div>
+  <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-xs text-muted-foreground text-center">
+    <div class="mx-auto mb-2 h-8 w-5 rounded-full border border-border p-1">
+      <div class="mx-auto h-2 w-1 animate-bounce rounded-full" style="background:color-mix(in oklab,var(--color-foreground) 60%,transparent)"></div>
+    </div>
+    Scroll
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="relative py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6">
+    <div data-reveal class="mb-12 flex flex-col items-start gap-2">
+      <span class="eyebrow"><span class="dot"></span>About Me</span>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Behind the code</h2>
+    </div>
+    <div class="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+      <div data-reveal class="relative">
+        <div class="absolute -inset-3 -z-10 rounded-3xl blur-2xl" style="background:linear-gradient(45deg,color-mix(in oklab,var(--color-primary) 20%,transparent),color-mix(in oklab,var(--color-accent) 20%,transparent))"></div>
+        <div class="glass relative overflow-hidden rounded-3xl p-8">
+          <div class="absolute inset-0 bg-grid opacity-20" style="mask-image:radial-gradient(ellipse at top left, black, transparent 70%);-webkit-mask-image:radial-gradient(ellipse at top left, black, transparent 70%);"></div>
+          <div class="relative">
+            <div class="text-xs font-medium uppercase tracking-[0.3em] text-primary">Profile</div>
+            <h3 class="mt-3 font-display text-3xl font-bold leading-tight">Arpon Sarkar <span class="text-gradient">Choity</span></h3>
+            <p class="mt-3 text-sm text-muted-foreground">CSE Undergraduate · Web Developer · UI/UX Designer · ML Enthusiast</p>
+            <div class="mt-6 space-y-3 text-sm">
+              <div class="row"><span class="text-muted-foreground">Location</span><span class="font-medium">Rajshahi, Bangladesh</span></div>
+              <div class="row"><span class="text-muted-foreground">University</span><span class="font-medium">Varendra University</span></div>
+              <div class="row"><span class="text-muted-foreground">Currently</span><span class="font-medium">6th Semester, B.Sc. CSE</span></div>
+              <div class="row"><span class="text-muted-foreground">Focus</span><span class="font-medium">Web · Design · Machine Learning</span></div>
+              <div class="row"><span class="text-muted-foreground">Availability</span><span class="font-medium">Open to opportunities</span></div>
+            </div>
+            <blockquote class="mt-6 border-l-2 pl-4 text-sm italic text-muted-foreground" style="border-color:color-mix(in oklab,var(--color-primary) 60%,transparent)">"Turning messy ideas into clean, usable products — one thoughtful interface at a time."</blockquote>
+          </div>
+        </div>
+      </div>
+      <div data-reveal>
+        <p class="text-lg leading-relaxed text-muted-foreground">
+          I'm a Computer Science & Engineering undergraduate at <span class="text-foreground">Varendra University, Bangladesh</span>, drawn to the intersection of design, code, and intelligence. My focus areas are <span class="text-foreground">web development, UI/UX design, machine learning</span> and applied research.
+        </p>
+        <p class="mt-4 text-muted-foreground">
+          I love turning messy ideas into clean, usable products — analytical thinking, careful problem-solving, and an unhurried bias toward continuous learning are how I work. Beyond coursework, I publish research, contribute to my university's research community, and mentor peers in science & technology.
+        </p>
+        <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4" id="stats">
+          <div class="stat-card"><i data-lucide="book-open" class="h-5 w-5 text-primary"></i><div class="mt-3 font-display text-3xl font-bold"><span class="counter" data-to="2">0</span><span class="text-accent">+</span></div><div class="mt-1 text-xs text-muted-foreground">Research Papers Published</div></div>
+          <div class="stat-card"><i data-lucide="users" class="h-5 w-5 text-primary"></i><div class="mt-3 font-display text-3xl font-bold"><span class="counter" data-to="4">0</span><span class="text-accent">+</span></div><div class="mt-1 text-xs text-muted-foreground">Years Mentoring</div></div>
+          <div class="stat-card"><i data-lucide="code-2" class="h-5 w-5 text-primary"></i><div class="mt-3 font-display text-3xl font-bold"><span class="counter" data-to="20">0</span><span class="text-accent">+</span></div><div class="mt-1 text-xs text-muted-foreground">Technical Skills</div></div>
+          <div class="stat-card"><i data-lucide="award" class="h-5 w-5 text-primary"></i><div class="mt-3 font-display text-3xl font-bold"><span class="counter" data-to="8">0</span><span class="text-accent">+</span></div><div class="mt-1 text-xs text-muted-foreground">Workshops & Certifications</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education" class="relative py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6">
+    <div data-reveal class="mb-12 flex flex-col items-start gap-2">
+      <span class="eyebrow"><span class="dot"></span>Education</span>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">The academic timeline</h2>
+    </div>
+    <div class="relative mx-auto max-w-3xl">
+      <div class="absolute left-4 top-2 bottom-2 w-px md:left-1/2" style="background:linear-gradient(to bottom,var(--color-primary),var(--color-accent),transparent)"></div>
+      <div class="space-y-10" id="edu-list"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="relative py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6">
+    <div data-reveal class="mb-12 flex flex-col items-start gap-2">
+      <span class="eyebrow"><span class="dot"></span>Skills</span>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Tools I build & think with</h2>
+    </div>
+    <div id="skills-grid" class="grid gap-5 md:grid-cols-2 lg:grid-cols-3"></div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="relative py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6">
+    <div data-reveal class="mb-12 flex flex-col items-start gap-2">
+      <span class="eyebrow"><span class="dot"></span>Services</span>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">What I can help you build</h2>
+    </div>
+    <div id="services-grid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"></div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section id="research" class="relative py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6">
+    <div data-reveal class="mb-12 flex flex-col items-start gap-2">
+      <span class="eyebrow"><span class="dot"></span>Research & Achievements</span>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Work that travels beyond the classroom</h2>
+    </div>
+    <div id="research-grid" class="grid gap-5 md:grid-cols-3"></div>
+  </div>
+</section>
+
+<!-- ============ DISTINCTIONS ============ -->
+<section id="distinctions" class="relative py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6">
+    <div data-reveal class="mb-12 flex flex-col items-start gap-2">
+      <span class="eyebrow"><span class="dot"></span>Recognition</span>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Distinctions / Achievements</h2>
+    </div>
+    <div id="dist-grid" class="grid gap-4 sm:grid-cols-2"></div>
+  </div>
+</section>
+
+<!-- ============ EXTRA ============ -->
+<section id="extra" class="relative py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6">
+    <div data-reveal class="mb-12 flex flex-col items-start gap-2">
+      <span class="eyebrow"><span class="dot"></span>Extra-curricular</span>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Leadership & collaboration</h2>
+    </div>
+    <div data-reveal class="grid gap-6 rounded-3xl glass p-8 md:grid-cols-[1fr_2fr]">
+      <div>
+        <div class="text-xs font-medium text-primary">2024 — Present</div>
+        <h3 class="mt-2 font-display text-2xl font-semibold">Department Representative</h3>
+        <div class="mt-1 text-sm text-muted-foreground">Varendra University Research Club</div>
+      </div>
+      <ul class="grid gap-3 sm:grid-cols-2">
+        <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>Research collaboration across departments</li>
+        <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>Academic activity participation & coordination</li>
+        <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>Student support in data analysis</li>
+        <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>Research documentation assistance</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="relative py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6">
+    <div data-reveal class="mb-12 flex flex-col items-start gap-2">
+      <span class="eyebrow"><span class="dot"></span>Contact</span>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Let's build something great</h2>
+    </div>
+    <div class="grid gap-8 lg:grid-cols-2">
+      <div data-reveal class="space-y-4">
+        <p class="text-muted-foreground">Have a project, research collaboration, or just want to say hi? Drop a message — I'll get back within a day or two.</p>
+        <a href="tel:+8801568185374" class="contact-card"><span class="ic"><i data-lucide="phone" class="h-5 w-5"></i></span><div><div class="lbl">Phone</div><div class="val">+880 1568 185374</div></div></a>
+        <a href="mailto:arponsarkar2024@gmail.com" class="contact-card"><span class="ic"><i data-lucide="mail" class="h-5 w-5"></i></span><div><div class="lbl">Email</div><div class="val">arponsarkar2024@gmail.com</div></div></a>
+        <a href="https://www.linkedin.com/in/arpon-sarkar-choity-a77b01394" target="_blank" rel="noreferrer" class="contact-card"><span class="ic"><i data-lucide="linkedin" class="h-5 w-5"></i></span><div><div class="lbl">LinkedIn</div><div class="val">arpon-sarkar-choity</div></div></a>
+        <div class="contact-card"><span class="ic"><i data-lucide="map-pin" class="h-5 w-5"></i></span><div><div class="lbl">Address</div><div class="val">Ramchandrapur, Ghoramara, Boalia, Rajshahi, Bangladesh</div></div></div>
+        <div class="overflow-hidden rounded-2xl border border-border">
+          <iframe title="Map" src="https://www.google.com/maps?q=Rajshahi,Bangladesh&output=embed" class="h-56 w-full" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <form data-reveal id="contact-form" class="glass space-y-4 rounded-2xl p-6">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div><label for="name" class="mb-1.5 block text-sm font-medium">Name</label><input id="name" name="name" required placeholder="Your name" class="field" /></div>
+          <div><label for="email" class="mb-1.5 block text-sm font-medium">Email</label><input id="email" name="email" type="email" required placeholder="you@email.com" class="field" /></div>
+        </div>
+        <div><label for="subject" class="mb-1.5 block text-sm font-medium">Subject</label><input id="subject" name="subject" required placeholder="What's this about?" class="field" /></div>
+        <div><label class="mb-1.5 block text-sm font-medium">Message</label><textarea rows="5" required name="message" placeholder="Tell me a bit about your project..." class="field"></textarea></div>
+        <div id="form-success" class="hidden rounded-xl px-4 py-3 text-sm" style="border:1px solid color-mix(in oklab,#10b981 30%,transparent);background:color-mix(in oklab,#10b981 10%,transparent);color:#059669">Thanks! Your message was sent — I'll be in touch soon.</div>
+        <div id="form-error" class="hidden rounded-xl px-4 py-3 text-sm text-destructive" style="border:1px solid color-mix(in oklab,var(--color-destructive) 30%,transparent);background:color-mix(in oklab,var(--color-destructive) 10%,transparent)"></div>
+        <button type="submit" id="submit-btn" class="inline-flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-white shadow-lg transition disabled:opacity-70" style="background:linear-gradient(90deg,var(--color-primary),var(--color-accent))">
+          <span id="submit-label">Send Message</span>
+          <i data-lucide="send" class="h-4 w-4"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-border">
+  <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row">
+    <div class="text-sm text-muted-foreground">© <span id="year"></span> Arpon Sarkar Choity — Designed with modern aesthetics and innovation.</div>
+    <div class="flex items-center gap-2 text-muted-foreground">
+      <a href="#about" class="rounded-full px-3 py-1 text-sm hover:text-foreground">About</a>
+      <a href="#projects" class="rounded-full px-3 py-1 text-sm hover:text-foreground">Projects</a>
+      <a href="#contact" class="rounded-full px-3 py-1 text-sm hover:text-foreground">Contact</a>
+      <span class="mx-2 h-4 w-px bg-border"></span>
+      <a href="https://www.linkedin.com/in/arpon-sarkar-choity-a77b01394" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin" class="h-4 w-4"></i></a>
+      <a href="#" aria-label="GitHub"><i data-lucide="github" class="h-4 w-4"></i></a>
+      <a href="#" aria-label="Facebook"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
