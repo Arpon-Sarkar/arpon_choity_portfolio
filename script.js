@@ -1,5 +1,3 @@
-/* ============== Arpon portfolio — vanilla JS ============== */
-
 // ---------- Theme ----------
 (function initTheme() {
   const saved = localStorage.getItem('theme');
